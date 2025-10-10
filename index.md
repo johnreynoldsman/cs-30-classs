@@ -7,4 +7,4 @@
 ## assignments
 
 -[Interactive Scene](interactive-scene)
--[generative art](generative-art)
+-[arrays and objects](arrays-objects)

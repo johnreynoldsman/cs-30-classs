@@ -1,14 +1,18 @@
 let r = 0;
 let g = 0;
 let b = 0;
+let myColor;
 function setup() {
-  createCanvas(width, height);
+  createCanvas(windowWidth, windowHeight);
 
 }
 //not done yet
 function draw() {
-  let mycolor = (r, g, b);
+  let square;
+  let myColor = color(r, g, b);
   background(r, g, b);
+  textAlign(CENTER);
+  textSize(16); 
   if (keyIsDown(82)){
     r += 1;
   }
@@ -27,7 +31,9 @@ function draw() {
   if (keyIsDown(78)){
     b -= 1;
   }
+  text(myColor.toString('#rrggbb'), 50, 50);
   
   
   
 }
+function 
