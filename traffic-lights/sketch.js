@@ -15,15 +15,15 @@ function setup() {
 }
 function change_color(){
   if (light_color === "red" && millis() > switchTime + redDuration){
-    light_color  = "green"
+    light_color  = "green";
     switchTime = millis();
   }
   else if (light_color === "green" && millis() > switchTime + greenDuration){
-    light_color = "yellow"
+    light_color = "yellow";
     switchTime = millis();
   }
   else if (light_color === "yellow" && millis() > switchTime + yellowDuration){
-    light_color = "red"
+    light_color = "red";
     switchTime = millis();
   }
 }
@@ -48,15 +48,15 @@ function drawOutlineOfLights() {
 }
 function show_lights(){
   if (light_color === "red"){
-    fill("red")
+    fill("red");
     ellipse(width/2, height/2 - 65, 50, 50);
   }
   else if (light_color === "green"){
-    fill("green")
+    fill("green");
     ellipse(width/2, height/2 + 65, 50, 50);
   }
   else if (light_color === "yellow"){
-    fill("yellow")
+    fill("yellow");
     ellipse(width/2, height/2, 50, 50);
   }
 

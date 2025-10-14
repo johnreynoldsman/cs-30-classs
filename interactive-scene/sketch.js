@@ -1,3 +1,9 @@
+// hexadecimal background colour
+// Lacon.R
+// october 14th 2025
+
+
+
 let r = 0;
 let g = 0;
 let b = 0;
@@ -6,7 +12,6 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
 
 }
-//not done yet
 function draw() {
   let square;
   let myColor = color(r, g, b);
@@ -31,9 +36,8 @@ function draw() {
   if (keyIsDown(78)){
     b -= 1;
   }
-  text(myColor.toString('#rrggbb'), 50, 50);
+  text(myColor.toString('#rrggbb'), windowWidth/2, windowHeight/2);
   
   
   
 }
-function 
