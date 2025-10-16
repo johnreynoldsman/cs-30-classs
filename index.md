@@ -4,6 +4,7 @@
 - [Traffic lights](traffic-light)
 - [generative art](generative-art)
 - [perlin Noise](perlin-noise)
+- [perlin bubbles](perlin-bubbles)
 
 ## assignments
 

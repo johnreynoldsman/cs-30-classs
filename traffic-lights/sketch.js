@@ -5,7 +5,7 @@
 // Extra for Experts:
 // - describe what you did to take this project "above and beyond"
 
-let light_color = ("red");
+let light_color = "red";
 let switchTime  = 0;
 let greenDuration = 4000;
 let redDuration = 4000;
