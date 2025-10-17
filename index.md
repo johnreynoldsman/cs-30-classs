@@ -5,6 +5,7 @@
 - [generative art](generative-art)
 - [perlin Noise](perlin-noise)
 - [perlin bubbles](perlin-bubbles)
+- [terrain generation](terrain)
 
 ## assignments
 
