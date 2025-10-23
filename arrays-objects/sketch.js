@@ -6,7 +6,10 @@
 // - describe what you did to take this project "above and beyond"
 const myarray = [];
 let theColor = 'white';
-let words = myarray.toString();
+let y = 455;
+let x = 960;
+let mysize = 12;
+//let words = myarray.toString();
 function setup() {
   createCanvas(windowWidth, windowHeight);
 }
@@ -96,15 +99,32 @@ function keyPressed(){
   else if (keyCode === 8){
     myarray.pop();
   }
-  
+  else if (keyCode === 187){
+    mysize += 1;
+  }
+  else if (keyCode === 189){
+    mysize -= 1;
+  }
 }
 
 
 function draw() {
   background(theColor);
   textAlign(CENTER);
-  text(words , windowWidth / 2 , windowHeight/2);
-  
+  if (keyIsDown(38)){
+    y -= 3;
+  }
+  if (keyIsDown(40)){
+    y += 3;
+  }
+  if (keyIsDown(37)){
+    x -= 3;
+  }
+  if (keyIsDown(39)){
+    x += 3;
+  }
+  textSize(mysize);
+  text(myarray.join('') , x , y);
   // use keytyped or maybe keyisdown to add letters to an array thats in a textblock except that may only work by writing backwards
   // use backspace to pop current 
 
