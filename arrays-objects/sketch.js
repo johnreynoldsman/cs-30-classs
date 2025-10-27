@@ -1,15 +1,16 @@
-// Project Title
-// Your Name
-// Date
+// weird word world
+// Lacon
+// October 24 2025
 //
 // Extra for Experts:
-// - describe what you did to take this project "above and beyond"
+// changed size???
+
 const myarray = [];
-let theColor = 'white';
+let backColor = 255;
+let textColor = 0;
 let y = 455;
 let x = 960;
 let mysize = 12;
-//let words = myarray.toString();
 function setup() {
   createCanvas(windowWidth, windowHeight);
 }
@@ -105,11 +106,50 @@ function keyPressed(){
   else if (keyCode === 189){
     mysize -= 1;
   }
+  else if (keyCode === 48){
+    myarray.push('0');
+  }
+  else if (keyCode === 49){
+    myarray.push('1');
+  }
+  else if (keyCode === 50){
+    myarray.push('2');
+  }
+  else if (keyCode === 51){
+    myarray.push('3');
+  }
+  else if (keyCode === 52){
+    myarray.push('4');
+  }
+  else if (keyCode === 53){
+    myarray.push('5');
+  }
+  else if (keyCode === 54){
+    myarray.push('6');
+  }
+  else if (keyCode === 55){
+    myarray.push('7');
+  }
+  else if (keyCode === 56){
+    myarray.push('8');
+  }
+  else if (keyCode === 57){
+    myarray.push('9');
+  }
+  else if (keyCode === 190){
+    myarray.push('.');
+  }
+  else if (keyCode === 188){
+    myarray.push(',');
+  }
+  else if (keyCode === 222){
+    myarray.push("'");
+  }
 }
 
 
 function draw() {
-  background(theColor);
+  background(backColor);
   textAlign(CENTER);
   if (keyIsDown(38)){
     y -= 3;
@@ -124,10 +164,17 @@ function draw() {
     x += 3;
   }
   textSize(mysize);
+  fill(textColor);
   text(myarray.join('') , x , y);
-  // use keytyped or maybe keyisdown to add letters to an array thats in a textblock except that may only work by writing backwards
-  // use backspace to pop current 
 
-  
-  
+}
+function mouseClicked(){
+  if (backColor === 255){
+    backColor = 0;
+    textColor = 255;
+  }
+  else{
+    backColor = 255;
+    textColor = 0;
+  }
 }
