@@ -7,6 +7,7 @@
 - [perlin bubbles](perlin-bubbles)
 - [terrain generation](terrain)
 - [grid demo](grid)
+- [rectangle neighbors](neighbors)
 
 ## assignments
 
