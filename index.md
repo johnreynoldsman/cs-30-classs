@@ -11,5 +11,6 @@
 
 ## assignments
 
--[Interactive Scene](interactive-scene)
--[arrays and objects](arrays-objects)
+- [Interactive Scene](interactive-scene)
+- [arrays and objects](arrays-objects)
+- [grid project](grid-project)
