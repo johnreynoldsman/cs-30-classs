@@ -9,7 +9,7 @@
 const CELL_SIZE = 20;
 const open_tile = 0;
 const wall = 1;
-const character = 5;
+const redsquare = 5;
 let grid;
 let rows;
 let cols;
@@ -25,7 +25,6 @@ function draw() {
   background("blue");
   displayGrid();
 }
-
 function mousePressed() {
   let x = Math.floor(mouseX/CELL_SIZE);
   let y = Math.floor(mouseY/CELL_SIZE);
@@ -33,15 +32,16 @@ function mousePressed() {
 
   toggleCell(x ,y);
 }
-
 function toggleCell(x, y) {
-  //make sure the cell you're toggling actually exists!
   if (x >= 0 && x < cols && y >= 0 && y < rows) {
-    if (grid[y][x] === open_tile) {
+    if (grid[y][x] === redsquare) {
       grid[y][x] = wall;
     }
     else if (grid[y][x] === wall) {
       grid[y][x] = open_tile;
+    }
+    else if (grid[y][x] === open_tile) {
+      grid[y][x] = redsquare;
     }
   }
 }
@@ -49,6 +49,9 @@ function toggleCell(x, y) {
 function keyPressed() {
   if (key === "e") {
     grid = generateEmptyGrid(cols, rows);
+  }
+  else if (key === "r"){
+    grid = mousePressed();
   }
 }
 
@@ -61,7 +64,7 @@ function displayGrid() {
       else if (grid[y][x] === wall) {
         fill("black");
       }
-      else if (grid[y][x] === character) {
+      else if (grid[y][x] === redsquare) {
         fill("red");
       }
       square(x * CELL_SIZE, y * CELL_SIZE, CELL_SIZE);
