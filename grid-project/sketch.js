@@ -51,7 +51,7 @@ function keyPressed() {
     grid = generateEmptyGrid(cols, rows);
   }
   else if (key === "r"){
-    grid = mousePressed();
+    ;
   }
 }
 
