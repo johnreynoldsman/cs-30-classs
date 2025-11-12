@@ -1,12 +1,11 @@
-// Project Title
-// Your Name
-// Date
-//
-// Extra for Experts:
-// - describe what you did to take this project "above and beyond"
+// colored tiles grid project
+// Lacon.R
+// November 12 2025
 
 
-const CELL_SIZE = 20;
+
+const CELL_SIZE = 20; 
+//all the colors able to be used
 const whiteSquare = 0;
 const blackSquare = 1;
 const redSquare = 2;
@@ -17,6 +16,7 @@ const tanSquare = 6;
 const purpleSquare = 7;
 const orangeSquare = 8;
 const greenSquare = 9;
+
 let grid;
 let rows;
 let cols;
@@ -46,7 +46,8 @@ function toggleCell(x, y) {
 function keyPressed() {
   let x = Math.floor(mouseX/CELL_SIZE);
   let y = Math.floor(mouseY/CELL_SIZE);
-  if (key === "e"){
+  //what keys do what
+  if (key === "Enter"){
     grid = generateEmptyGrid(cols, rows);
   }
   else if (key === "r"){
@@ -83,6 +84,7 @@ function keyPressed() {
 function displayGrid() {
   for (let y = 0; y < rows; y++) {
     for (let x = 0; x < cols; x++) {
+      //adding the colors
       if (grid[y][x] === whiteSquare) {
         fill("white");
       }
