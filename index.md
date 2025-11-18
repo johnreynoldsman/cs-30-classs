@@ -11,6 +11,7 @@
 - [game-of-life](game-of-life)
 - [basic-OOP](basic-OOP)
 - [fireworks-OOP](fireworks-OOP)
+- [nodes](nodes-OOP)
 ## assignments
 
 - [Interactive Scene](interactive-scene)
